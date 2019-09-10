@@ -15,5 +15,53 @@
     </article> -->
     <article>
         <h3>Class e Style Binding</h3>
+
+        <div>Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-primary">primary</option>
+                <option value="alert-secondary">secondary</option>
+                <option value="alert-success">success</option>
+                <option value="alert-danger">danger</option>
+                <option value="alert-warning">warning</option>
+                <option value="alert-info">info</option>
+                <option value="alert-light">light</option>
+                <option value="alert-dark">dark</option>
+            </select><br><br>
+
+            <div class="alert {{ classe.value }}" role="alert" >Texto colorido conforme opçao do combobox</div>
+        </div>
+
+        <div class="alert" [class.alert-primary]="classe.value == 'alert-primary'" 
+                            [style.display]="classe.value=='alert-primary'?'block':'none'" role="alert">
+            A simple primary alert—check it out!
+          </div>
+          <div class="alert" [class.alert-secondary]="classe.value == 'alert-secondary'" 
+          [style.display]="classe.value=='alert-secondary'?'block':'none'" role="alert">
+            A simple secondary alert—check it out!
+          </div>
+          <div class="alert" [class.alert-success]="classe.value == 'alert-success'"  
+                            [style.display]="classe.value=='alert-success'?'block':'none'" role="alert">
+            A simple success alert—check it out!
+          </div>
+          <div class="alert" [class.alert-danger]="classe.value == 'alert-danger'"  
+                            [style.display]="classe.value=='alert-danger'?'block':'none'" role="alert">
+            A simple danger alert—check it out!
+          </div>
+          <div class="alert" [class.alert-warning]="classe.value == 'alert-warning'"  
+                            [style.display]="classe.value=='alert-warning'?'block':'none'" role="alert">
+            A simple warning alert—check it out!
+          </div>
+          <div class="alert" [class.alert-info]="classe.value == 'alert-info'"  
+                            [style.display]="classe.value=='alert-info'?'block':'none'" role="alert">
+            A simple info alert—check it out!
+          </div>
+          <div class="alert" [class.alert-light]="classe.value == 'alert-light'"  
+                            [style.display]="classe.value=='alert-light'?'block':'none'" role="alert">
+            A simple light alert—check it out!
+          </div>
+          <div class="alert" [class.alert-dark]="classe.value == 'alert-dark'"  
+                            [style.display]="classe.value=='alert-dark'?'block':'none'" role="alert">
+            A simple dark alert—check it out!
+          </div>
     </article>
 </section>
