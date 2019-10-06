@@ -23,6 +23,7 @@ import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { NgElseDirective } from './shared/ng-else.directive';
 import { CursosComponent } from './cursos/cursos.component';
+import { CriarCursoModule } from './criar-curso/criar-curso.module';
 
 @NgModule({
   declarations: [
@@ -49,10 +50,11 @@ import { CursosComponent } from './cursos/cursos.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MeuFormModule
+    MeuFormModule,
+    CriarCursoModule
 
   ],
-  providers: [CursosService],
+  // providers: [CursosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
