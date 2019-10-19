@@ -3,9 +3,9 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; 
 import { CursosService } from "./cursos/cursos.service";
 import { LogService } from "./shared/log.service";
-import { routing } from "./app.routing";
+// import { routing } from "./app.routing";
+import { AppRoutingModule } from './app.routing.module';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { MeuFormModule } from './meu-form/meu-form.module';
@@ -39,9 +39,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CursosRoutingComponent } from './cursos-routing/cursos-routing.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursoDetalheComponent } from './cursos-routing/curso-detalhe/curso-detalhe.component';
 import { CursosRoutingService } from './cursos-routing/cursos-routing.service';
-import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
+import { CursoNaoEncontradoComponent } from './cursos-routing/curso-nao-encontrado/curso-nao-encontrado.component';
+import { CursoRoutingModule } from './cursos-routing/cursos-routing.module';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -71,10 +72,10 @@ registerLocaleData(localePt, 'pt-BR');
     FiltroArrayImpuroPipe,
     HomeComponent,
     LoginComponent,
-    CursosRoutingComponent,
+    // CursosRoutingComponent,
     NavbarComponent,
-    CursoDetalheComponent,
-    CursoNaoEncontradoComponent
+    // CursoDetalheComponent,
+    // CursoNaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +83,9 @@ registerLocaleData(localePt, 'pt-BR');
     FormsModule,
     MeuFormModule,
     CriarCursoModule,
-    routing
+    // routing
+    CursoRoutingModule,
+    AppRoutingModule,
 
   ],
   // providers: [CursosService],
@@ -92,7 +95,7 @@ registerLocaleData(localePt, 'pt-BR');
     //   provide: LOCALE_ID,
     //   useValue:'pt-BR'
     // }
-    CursosRoutingService,
+    // CursosRoutingService,
     SettingsService,
     {
       provide: LOCALE_ID,
