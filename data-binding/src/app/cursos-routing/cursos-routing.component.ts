@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CursosRoutingService } from "./cursos-routing.service";
 
 @Component({
   selector: 'app-cursos-routing',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosRoutingComponent implements OnInit {
 
-  constructor() { }
+  cursos: any[];
+
+  constructor(private CursosRoutingService: CursosRoutingService ) { }
 
   ngOnInit() {
+    this.cursos = this.CursosRoutingService.getCursosRouting()
   }
 
 }

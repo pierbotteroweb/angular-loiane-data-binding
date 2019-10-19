@@ -40,6 +40,8 @@ import { LoginComponent } from './login/login.component';
 import { CursosRoutingComponent } from './cursos-routing/cursos-routing.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { CursosRoutingService } from './cursos-routing/cursos-routing.service';
+import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -71,7 +73,8 @@ registerLocaleData(localePt, 'pt-BR');
     LoginComponent,
     CursosRoutingComponent,
     NavbarComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
+    CursoNaoEncontradoComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ registerLocaleData(localePt, 'pt-BR');
     //   provide: LOCALE_ID,
     //   useValue:'pt-BR'
     // }
+    CursosRoutingService,
     SettingsService,
     {
       provide: LOCALE_ID,
