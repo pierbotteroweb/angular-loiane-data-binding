@@ -3,6 +3,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule }   from '@angular/forms'; 
 import { CursosService } from "./cursos/cursos.service";
 import { LogService } from "./shared/log.service";
+import { routing } from "./app.routing";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,11 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { FiltroArrayPipe } from './filtro-array.pipe';
 import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { CursosRoutingComponent } from './cursos-routing/cursos-routing.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -60,14 +66,20 @@ registerLocaleData(localePt, 'pt-BR');
     ExemplosPipesComponent,
     CamelCasePipe,
     FiltroArrayPipe,
-    FiltroArrayImpuroPipe
+    FiltroArrayImpuroPipe,
+    HomeComponent,
+    LoginComponent,
+    CursosRoutingComponent,
+    NavbarComponent,
+    CursoDetalheComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MeuFormModule,
-    CriarCursoModule
+    CriarCursoModule,
+    routing
 
   ],
   // providers: [CursosService],
