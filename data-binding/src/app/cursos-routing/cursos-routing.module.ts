@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+// import { RouterModule } from '@angular/router';
+import { CursosRoutingModule } from "./cursos-routing.routing.module";
 
 import { CursosRoutingComponent } from "./cursos-routing.component";
 import { CursoDetalheComponent } from "./curso-detalhe/curso-detalhe.component";
@@ -10,7 +11,9 @@ import { CursosRoutingService } from "./cursos-routing.service";
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        CursosRoutingModule
+        
+        // RouterModule
     ],
     exports: [],
     declarations:[
