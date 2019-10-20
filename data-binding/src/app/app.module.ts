@@ -43,6 +43,7 @@ import { CursoDetalheComponent } from './cursos-routing/curso-detalhe/curso-deta
 import { CursosRoutingService } from './cursos-routing/cursos-routing.service';
 import { CursoNaoEncontradoComponent } from './cursos-routing/curso-nao-encontrado/curso-nao-encontrado.component';
 import { CursoRoutingModule } from './cursos-routing/cursos-routing.module';
+import { AlunosModule } from './alunos/alunos.module';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -83,9 +84,10 @@ registerLocaleData(localePt, 'pt-BR');
     FormsModule,
     MeuFormModule,
     CriarCursoModule,
+    AlunosModule,
     // routing
     CursoRoutingModule,
-    AppRoutingModule,
+    AppRoutingModule
 
   ],
   // providers: [CursosService],
