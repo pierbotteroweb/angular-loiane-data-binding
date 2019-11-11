@@ -9,6 +9,8 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 // import { CursoNaoEncontradoComponent } from "./cursos-routing/curso-nao-encontrado/curso-nao-encontrado.component";
 
 const appRoutes: Routes = [
+    { path: 'cursos', loadChildren: './cursos-routing/cursos-routing.module#CursoRoutingModule'},
+    { path: 'alunos', loadChildren: './alunos/alunos.module#AlunosModule'},
     // { path: 'cursos', component: CursosRoutingComponent},
     // { path: 'curso/:id', component: CursoDetalheComponent},
     { path: 'login', component: LoginComponent },

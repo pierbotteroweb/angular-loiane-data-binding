@@ -42,7 +42,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CursoDetalheComponent } from './cursos-routing/curso-detalhe/curso-detalhe.component';
 import { CursosRoutingService } from './cursos-routing/cursos-routing.service';
 import { CursoNaoEncontradoComponent } from './cursos-routing/curso-nao-encontrado/curso-nao-encontrado.component';
-import { CursoRoutingModule } from './cursos-routing/cursos-routing.module';
+// import { CursoRoutingModule } from './cursos-routing/cursos-routing.module';
 import { AlunosModule } from './alunos/alunos.module';
 
 registerLocaleData(localePt, 'pt-BR');
@@ -86,7 +86,7 @@ registerLocaleData(localePt, 'pt-BR');
     CriarCursoModule,
     AlunosModule,
     // routing
-    CursoRoutingModule,
+    // CursoRoutingModule,
     AppRoutingModule
 
   ],

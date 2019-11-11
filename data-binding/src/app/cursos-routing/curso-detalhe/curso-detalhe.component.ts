@@ -37,7 +37,7 @@ export class CursoDetalheComponent implements OnInit  {
        console.log(this.id)
 
        if(this.curso==null){
-         this.router.navigate(['/naoEncontrado'])
+         this.router.navigate(['/cursos/naoEncontrado'])
        }
 
 
