@@ -44,6 +44,9 @@ import { CursosRoutingService } from './cursos-routing/cursos-routing.service';
 import { CursoNaoEncontradoComponent } from './cursos-routing/curso-nao-encontrado/curso-nao-encontrado.component';
 // import { CursoRoutingModule } from './cursos-routing/cursos-routing.module';
 import { AlunosModule } from './alunos/alunos.module';
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
+import { CursosGuard } from './guards/cursos.guard';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -99,6 +102,10 @@ registerLocaleData(localePt, 'pt-BR');
     // }
     // CursosRoutingService,
     SettingsService,
+    AuthService,
+    AuthGuard,
+    CursosGuard,
+    
     {
       provide: LOCALE_ID,
       deps: [SettingsService],
