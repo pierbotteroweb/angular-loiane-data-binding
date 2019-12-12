@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { AuthGuard } from './guards/auth.guard';
 import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 // import { CursoDetalheComponent } from './cursos-routing/curso-detalhe/curso-detalhe.component';
 // import { CursoNaoEncontradoComponent } from "./cursos-routing/curso-nao-encontrado/curso-nao-encontrado.component";
 
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
     },
     { path: 'alunos',
         loadChildren: './alunos/alunos.module#AlunosModule',
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard]//,
+        // canActivateChild: [AlunosGuard]
     },
     // { path: 'cursos', component: CursosRoutingComponent},
     // { path: 'curso/:id', component: CursoDetalheComponent},

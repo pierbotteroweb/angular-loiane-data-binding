@@ -47,6 +47,7 @@ import { AlunosModule } from './alunos/alunos.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -105,6 +106,7 @@ registerLocaleData(localePt, 'pt-BR');
     AuthService,
     AuthGuard,
     CursosGuard,
+    AlunosGuard,
     
     {
       provide: LOCALE_ID,
