@@ -12,11 +12,27 @@ export class AlunoFormComponent implements OnInit {
 
   aluno: any;
   inscricao: Subscription
+  private formMudou:boolean
 
   constructor(
     private route: ActivatedRoute,
     private alunosService: AlunosService
   ) { }
+
+  onInput(){
+    this.formMudou=true
+    console.log("mudou")
+
+  }
+
+  podeMudarRota(){
+    if(this.formMudou){
+      confirm("Tem certeza que deseja sair dessa página")
+    }
+
+    return true
+
+  }
 
   ngOnInit() {
     this.inscricao = this.route.params.subscribe(

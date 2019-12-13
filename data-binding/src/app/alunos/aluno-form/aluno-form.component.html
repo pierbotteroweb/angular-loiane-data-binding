@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="form-group col-12">
-            <input [(ngModel)]="aluno.nome" type="text" class="form-control" id="nome">
+            <input [(ngModel)]="aluno.nome" type="text" class="form-control" (input)="onInput()" id="nome">
             <label for="nome">Nome</label>
         </div>
     </div>
