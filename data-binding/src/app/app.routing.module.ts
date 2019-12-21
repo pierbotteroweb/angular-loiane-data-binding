@@ -15,11 +15,13 @@ const appRoutes: Routes = [
     { path: 'cursos',
         loadChildren: './cursos-routing/cursos-routing.module#CursoRoutingModule',
         canActivate: [AuthGuard],
-        canActivateChild: [CursosGuard]
+        canActivateChild: [CursosGuard],
+        canLoad: [AuthGuard]
     },
     { path: 'alunos',
         loadChildren: './alunos/alunos.module#AlunosModule',
-        canActivate: [AuthGuard]//,
+        canActivate: [AuthGuard],
+        canLoad: [AuthGuard]
         // canActivateChild: [AlunosGuard]
     },
     // { path: 'cursos', component: CursosRoutingComponent},
