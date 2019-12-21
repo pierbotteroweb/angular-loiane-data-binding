@@ -15,11 +15,12 @@ export class AuthService {
 
   fazerLogin(usuario: Usuario){
     if (usuario.nome === 'usuario@email.com' &&
-    usuario.senha ==='123456'){
+    usuario.senha ==='bernardo'){
       this.usuarioAutenticado = true
       this.mostrarMenuEmmiter.emit(true)
       this.router.navigate(['/'])
     } else{
+      alert("Usuário ou senha inválidos")
       this.usuarioAutenticado = false
       this.mostrarMenuEmmiter.emit(false)
     }
