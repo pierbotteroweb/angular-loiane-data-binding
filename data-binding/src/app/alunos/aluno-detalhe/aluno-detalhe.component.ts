@@ -1,3 +1,4 @@
+import { Aluno } from './../aluno';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -20,11 +21,20 @@ export class AlunoDetalheComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.inscricao = this.route.params.subscribe(
-      (params: any)=>{
-        let id = params['id'];
 
-        this.aluno = this.alunosService.getAluno(id)
+    console.log('ngOnInit: AlunoDetalheComponent')
+    // this.inscricao = this.route.params.subscribe(
+    //   (params: any)=>{
+    //     let id = params['id'];
+
+    //     this.aluno = this.alunosService.getAluno(id)
+    //   }
+    // )
+
+    this.inscricao = this.route.data.subscribe(
+      (info: {aluno: Aluno})=>{
+        console.log("Recebendo o obj Aluno do resolver")
+        this.aluno = info.aluno
       }
     )
   }
